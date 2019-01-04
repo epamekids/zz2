@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+  	function catLoader(){
+  		$.get("http://aws.random.cat/meow").done(
+  			function(data){
+  				$("#cat").append("<img width = 300 src = '" + data.file   +  "'>")
+      	}
+  		)
+  	}
+
+    </script>
+    </head>
+    <body>
+      <div id = "cat"></div>
+  	<button onclick = "catLoader()">MORE CATS</button>
+
+    </body>
+  </html>
